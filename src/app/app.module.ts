@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { JeweryAboutComponent } from './jewery-about/jewery-about.component';
 import { JeweryJewelsComponent } from './jewery-jewels/jewery-jewels.component';
 import { CartComponent } from './cart/cart.component';
+import { AppRoutingModule } from './app-routing-module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CartComponent } from './cart/cart.component';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
