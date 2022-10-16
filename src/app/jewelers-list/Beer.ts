@@ -4,5 +4,6 @@ export interface Beer {
     price: number;
     stock: number;
     clearance: boolean;
+    quantity: number;
   }
   

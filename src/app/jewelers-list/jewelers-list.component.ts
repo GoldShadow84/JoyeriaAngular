@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Beer } from './beer';
+import { Beer } from './Beer';
 
 @Component({
   selector: 'app-jewelers-list',
@@ -17,6 +17,7 @@ export class JewelersListComponent implements OnInit {
       price: 12,
       stock: 100,
       clearance: false,
+      quantity: 0,
     },
     {
       name: "Better call saul",
@@ -24,6 +25,8 @@ export class JewelersListComponent implements OnInit {
       price: 12,
       stock: 100,
       clearance: true,
+      quantity: 0,
+
     },
     {
         name: "Hielol",
@@ -31,6 +34,8 @@ export class JewelersListComponent implements OnInit {
         price: 12,
         stock: 0,
         clearance: false,
+       quantity: 0,
+
     }
   
 ];
@@ -38,6 +43,22 @@ export class JewelersListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upQuantity(beer: Beer): void {
+    if(beer.quantity < 10) {
+      beer.quantity++;
+    }
+  }
+
+  downQuantity(beer: Beer): void {
+    if(beer.quantity > 0 ) {
+      beer.quantity--;
+    }
+  }
+
+  changeQuantity(event: any, beer: Beer): void {
+    console.log(event.target);
   }
 
 }
