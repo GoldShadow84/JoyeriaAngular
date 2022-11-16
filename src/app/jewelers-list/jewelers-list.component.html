@@ -1,26 +1,67 @@
-<h1>lista de cerveza</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Compra</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let beer of beers" [ngClass]="{'clearance': beer.clearance}">
-            <td>{{beer.name | uppercase}}</td>
-            <td>{{beer.type}}</td>
-            <td>{{beer.price | currency}}</td>
-            <td><span *ngIf="beer.stock == 0">Sin Stock</span></td>
-            <app-input-integer [(quantity)]="beer.quantity" [max]="beer.stock" *ngIf="beer.stock" (maxReached)="maxReached($event)"></app-input-integer>
-            <td> Cant: {{beer.quantity}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="contenedor">
 
+    <div class="titular">
+        <h1 class="titularh1">Joyería en alpaca y piedras</h1>
+    </div>
+
+    <section class="content">
+        <h2 class="thetime">
+            La Joyeria en el Tiempo
+        </h2>
+        <figure class="joya-antigua">
+            <img src="./assets/images/joyas_antiguas_portada.jpg" alt="joyas-antiguas">
+        </figure>
+        <p>
+            Desde tiempos remotos el hombre buscó resaltar la belleza, rasgos físicos y expresar sus
+            sentimientos a través de diversos lenguajes artísticos, como la pintura, la música, la literatura y
+            la escultura, la joyería también encuentra sus orígenes en tiempos remotos. A partir del
+            descubrimiento del fuego y luego con la habilidad del hombre para trabajar los metales se comienzan
+            a ver piezas de joyería artesanal. Con el tiempo las piedras y los metales adquirieron gran valor ya
+            que la joyería se convirtió en símbolo de riqueza, status social. En diferentes culturas alrededor
+            del mundo podemos ver como la joyería se utiliza no solo como símbolo de riqueza sino como una forma
+            de embellecer y adornar. Esto se puede observar en emperadores incas, reyes del viejo mundo y en las
+            culturas orientales. Collares, anillos, pulseras, pecheras, brazaletes y coronas son algunas de las
+            formas en que se expresa la joyería artesanal. La mano creativa del artesano, trabajando metales
+            como la alpaca, el oro, la plata y la sutil combinación con piedras preciosas, semipreciosas que
+            dependiendo de la zona geográfica se puede encontrar gran variedad: rodocrosita, rubíes,
+            lapizlásuli, agatas, cuarzos, citrinos, amatista forman parte de una inmensa variedad de piedras.
+        </p>
+    </section>
+
+    <aside class="right-box">
+        <div class="imgtienda">
+            <img class="portadalogo" src="./assets/images/newlogo.jpg" alt="fotologo">
+        </div>
+        <div class="titulolista">
+            <h2 class="infojoyas">Tipos de Joyas</h2>
+        </div>
+        <p>Los diferentes tipos de joyas utilizados al largo del tiempo por hombres y mujeres de todas las culturas son: </p>
+        
+        <ul class="options">
+
+            <li>Pendientes</li>
+            <li>Collares</li>
+            <li>Pulseras</li>
+            <li>Anillos</li>
+            <li>Gemelos</li>
+            <li>Diademas</li>
+            <li>Broches</li>
+            <li>Coronas</li>
+            <li>Relojes</li>
+            <li>Trabas de corbata</li>
+            <li>Ballenas</li>
+            <li>Cadenas</li>
+            <li>Hebillas</li>
+            <li>Piercings</li>
+            <li>Pines</li>
+            <li>Cuff</li>
+            <li>Llaveros</li>
+        </ul>    
+
+        <p>Para mas informacion puedes ir a <a href="productos.html" target="_blank">Nuestras Joyas</a>    
+
+    </aside>
+</div>
 
 

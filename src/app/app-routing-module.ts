@@ -2,21 +2,26 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { JeweryAboutComponent } from './jewery-about/jewery-about.component';
 import { JeweryJewelsComponent } from './jewery-jewels/jewery-jewels.component';
+import { JeweryProductsComponent } from './jewery-products/jewery-products.component';
 
 const routes: Routes = [
     {
       path: '',
-      redirectTo: 'beers',
+      redirectTo: 'home',
       pathMatch: 'full',
     },
     {
-     path: 'beers',
+     path: 'home',
      component: JeweryJewelsComponent
     },
     {
-     path: 'about',
-     component: JeweryAboutComponent
+     path: 'products',
+     component: JeweryProductsComponent
     },
+    {
+      path: 'about',
+      component: JeweryAboutComponent
+     },
 ];
 
 
