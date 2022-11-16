@@ -9,6 +9,7 @@ import { JeweryAboutComponent } from './jewery-about/jewery-about.component';
 import { JeweryJewelsComponent } from './jewery-jewels/jewery-jewels.component';
 import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app-routing-module';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing-module';
     JewelersListComponent,
     JeweryAboutComponent,
     JeweryJewelsComponent,
-    CartComponent
+    CartComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,
