@@ -68,9 +68,13 @@
             </thead>
 
             <tbody id="tabla_dinamica">
-                <tr>
-                    <td>{{jewelers.tipos}}</td>
-
+                
+                <tr *ngFor="let jeweler of jewelers">
+                    <td>{{jeweler.tipos}}</td>
+                    <td>{{jeweler.descripcion}}</td>
+                    <td>{{jeweler.antiguedad}}</td>
+                    <td>{{jeweler.clasificacion}}</td>
+                    <td>{{jeweler.boton}}</td>
                 </tr>
 
             </tbody>
