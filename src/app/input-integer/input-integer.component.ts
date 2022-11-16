@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Beer } from '../jewelers-list/Beer';
+//import { Beer } from '../jewelers-list/Beer';
 
 
 

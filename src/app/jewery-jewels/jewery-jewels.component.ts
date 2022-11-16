@@ -13,3 +13,5 @@ export class JeweryJewelsComponent implements OnInit {
   }
 
 }
+
+
