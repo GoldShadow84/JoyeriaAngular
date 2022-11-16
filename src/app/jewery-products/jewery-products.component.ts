@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { JewelersDataService } from '../jewelers-data.service';
+import { Jeweler } from './Jeweler';
 
 @Component({
   selector: 'app-jewery-products',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JeweryProductsComponent implements OnInit {
 
-  constructor() { }
+  jewelers: Jeweler[] = [];
+
+  constructor(private jewelersDataService: JewelersDataService ) { }
 
   ngOnInit(): void {
+    this.jewelersDataService.getAll()
+    .subscribe(jewelers => this.jewelers = jewelers);
+    
+
   }
 
 }
