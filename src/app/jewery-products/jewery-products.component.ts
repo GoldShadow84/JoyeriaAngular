@@ -9,6 +9,9 @@ import { Jeweler } from './Jeweler';
 })
 export class JeweryProductsComponent implements OnInit {
 
+  model: Jeweler = { tipos: '', descripcion: '', antiguedad: '', clasificacion: '', boton: '', id: 0};
+
+
   jewelers: Jeweler[] = [];
 
   constructor(private jewelersDataService: JewelersDataService ) { }
@@ -16,8 +19,11 @@ export class JeweryProductsComponent implements OnInit {
   ngOnInit(): void {
     this.jewelersDataService.getAll()
     .subscribe(jewelers => this.jewelers = jewelers);
-    
+  }
 
+  onSubmit() {
+    this.jewelersDataService.addNewJeweler(this.model)
+    .subscribe((response: Jeweler) => console.log(response));
   }
 
 }

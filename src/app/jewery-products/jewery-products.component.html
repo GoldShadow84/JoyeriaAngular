@@ -85,21 +85,20 @@
     </div>
 
     <div class="form-tabla">
-        <form class="select-products">
+        <form class="select-products" (ngSubmit)="onSubmit()">
             <h2>Formulario de modificación de Tabla</h2>
             <p class="infomod">Aqui puedes Introducir, eliminar o modificar valores en la Tabla</p>
             <label for="Tipos">Tipos</label>
-            <input id="tipos" placeholder="">
+            <input [(ngModel)]="model.tipos" [ngModelOptions]="{standalone: true}" id="tipos" placeholder="">
             <label for="Descripcion">Descripcion</label>
-            <input id="descripcion" placeholder="">
+            <input [(ngModel)]="model.descripcion" [ngModelOptions]="{standalone: true}" id="descripcion" placeholder="">
             <label for="Antiguedad">Antiguedad</label>
-            <input id="antiguedad" placeholder="">
+            <input [(ngModel)]="model.antiguedad" [ngModelOptions]="{standalone: true}" id="antiguedad" placeholder="">
             <label for="Clasificacion">Clasificacion</label>
-            <input id="clasificacion" placeholder="">
+            <input [(ngModel)]="model.clasificacion" [ngModelOptions]="{standalone: true}" id="clasificacion" placeholder="">
 
             <div class="boton">
-                <button id="btn-agregar" type="button">Agregar</button>
-                <button id="btn-agregarx3" type="button">Agregar Tres</button>
+                <button type="submit" id="btn-agregar">Agregar</button>
             </div>
 
             <p class="respuesta" id="msg">Esperando solicitud...</p>

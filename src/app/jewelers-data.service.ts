@@ -19,6 +19,8 @@ export class JewelersDataService {
     return this.http.get<Jeweler[]>(URL);
   }
 
-
+  public addNewJeweler(jeweler: Jeweler): Observable<Jeweler> {
+    return this.http.post<Jeweler>(URL, jeweler);
+  }
 
 }
