@@ -63,7 +63,7 @@
                     <th>Descripcion</th>
                     <th>Antiguedad</th>
                     <th>Clasificacion</th>
-                    <th>BORRAR-MODIFICAR</th>
+                    <th>EDITAR/BORRAR</th>
                 </tr>
             </thead>
 
@@ -74,7 +74,9 @@
                     <td>{{jeweler.descripcion}}</td>
                     <td>{{jeweler.antiguedad}}</td>
                     <td>{{jeweler.clasificacion}}</td>
-                    <td>{{jeweler.boton}}</td>
+                    <td>{{jeweler.id}}</td>
+                    <button class="btn btn-warning btn-sm" (click)="updateJeweler(jeweler)">Editar</button>
+                    <button class="btn btn-danger btn-sm" (click)="deleteJeweler(jeweler)">Eliminar</button>
                 </tr>
 
             </tbody>

@@ -9,7 +9,7 @@ import { Jeweler } from './Jeweler';
 })
 export class JeweryProductsComponent implements OnInit {
 
-  model: Jeweler = { tipos: '', descripcion: '', antiguedad: '', clasificacion: '', boton: '', id: 0};
+  model: Jeweler = { tipos: '', descripcion: '', antiguedad: '', clasificacion: '', id: 0};
 
 
   jewelers: Jeweler[] = [];
@@ -23,6 +23,16 @@ export class JeweryProductsComponent implements OnInit {
 
   onSubmit() {
     this.jewelersDataService.addNewJeweler(this.model)
+    .subscribe((response: Jeweler) => console.log(response));
+  }
+
+  updateJeweler(jeweler: Jeweler) {
+    this.jewelersDataService.updateJeweler(jeweler.id, this.model)
+    .subscribe((response: Jeweler) => console.log(response));
+  }
+
+  deleteJeweler(jeweler: Jeweler) {
+    this.jewelersDataService.deleteJeweler(jeweler.id)
     .subscribe((response: Jeweler) => console.log(response));
   }
 
