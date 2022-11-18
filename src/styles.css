@@ -76,6 +76,10 @@ footer { grid-area: footer; }
 
     
 
+.PREMIUM {
+    background-color: rgb(241, 188, 127);
+    color:rgb(7, 6, 5);
+}
 
 
 
@@ -391,7 +395,7 @@ footer {
 }
 
 tbody {
-    background: rgb(245, 243, 133);
+    background: rgb(231, 231, 226);
     border: 0.2em solid #000; 
     border-left: 0;
     
@@ -420,9 +424,6 @@ thead {
 }
 
 
-tr:nth-child(even) { /*  darle color a los tr pares */
-    background-color: #fff;
-}
 
 
 

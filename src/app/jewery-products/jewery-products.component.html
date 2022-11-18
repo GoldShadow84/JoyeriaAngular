@@ -65,11 +65,12 @@
             </thead>
 
             <tbody id="tabla_dinamica">
-                
-                <tr *ngFor="let jeweler of jewelers">
+                <!--  ng if si precio mayor a tanto, ponerlo en rojo class -->
+                <tr *ngFor="let jeweler of jewelers" [ngClass]="{'PREMIUM': jeweler.precio > 200000}">
                     <td>{{jeweler.nombre}}</td>
                     <td>{{jeweler.descripcion}}</td>
                     <td>{{jeweler.precio}}</td>
+                    <td><span *ngIf="jeweler.precio > 200000">PREMIUM</span>
                     <button class="btn btn-warning btn-sm" (click)="updateJeweler(jeweler)">Editar</button>
                     <button class="btn btn-danger btn-sm" (click)="deleteJeweler(jeweler)">Eliminar</button>
                 </tr>
@@ -88,7 +89,7 @@
             <label for="Descripcion">Descripcion</label>
             <input [(ngModel)]="model.descripcion" [ngModelOptions]="{standalone: true}" id="descripcion" placeholder="">
             <label for="Precio">Precio</label>
-            <input [(ngModel)]="model.precio" [ngModelOptions]="{standalone: true}" id="precio" placeholder="">
+            <input [(ngModel)]="model.precio" [ngModelOptions]="{standalone: true}" id="precio" placeholder="" type="number">
 
             <div class="boton">
                 <button type="submit" id="btn-agregar">Agregar</button>
