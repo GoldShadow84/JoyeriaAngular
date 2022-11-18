@@ -12,7 +12,6 @@
         <p class="artesano">Te asesoramos a lo largo de todo el proceso de selección y te acompañamos en cada una de
             tus decisiones, aconsejándote desde nuestra experiencia y trayectoria. Contamos con una amplia gama de
             productos de calidad.
-            Puedes hacer un pedido personal al Artesano en <a href="contacto.html" target="_blank">Contacto</a>
         </p>
     </aside>
     
@@ -52,17 +51,15 @@
 
     <!--TABLA-->
 
-
     <div class="tablecontainer">
 
         <table class="tabla_sin">
 
             <thead>
                 <tr>
-                    <th>Tipos</th>
+                    <th>Nombre</th>
                     <th>Descripcion</th>
-                    <th>Antiguedad</th>
-                    <th>Clasificacion</th>
+                    <th>Precio</th>
                     <th>EDITAR/BORRAR</th>
                 </tr>
             </thead>
@@ -70,10 +67,9 @@
             <tbody id="tabla_dinamica">
                 
                 <tr *ngFor="let jeweler of jewelers">
-                    <td>{{jeweler.tipos}}</td>
+                    <td>{{jeweler.nombre}}</td>
                     <td>{{jeweler.descripcion}}</td>
-                    <td>{{jeweler.antiguedad}}</td>
-                    <td>{{jeweler.clasificacion}}</td>
+                    <td>{{jeweler.precio}}</td>
                     <button class="btn btn-warning btn-sm" (click)="updateJeweler(jeweler)">Editar</button>
                     <button class="btn btn-danger btn-sm" (click)="deleteJeweler(jeweler)">Eliminar</button>
                 </tr>
@@ -81,22 +77,18 @@
             </tbody>
 
         </table>
-
-
     </div>
 
     <div class="form-tabla">
         <form class="select-products" (ngSubmit)="onSubmit()">
             <h2>Formulario de modificación de Tabla</h2>
             <p class="infomod">Aqui puedes Introducir, eliminar o modificar valores en la Tabla</p>
-            <label for="Tipos">Tipos</label>
-            <input [(ngModel)]="model.tipos" [ngModelOptions]="{standalone: true}" id="tipos" placeholder="">
+            <label for="Nombre">Nombre</label>
+            <input [(ngModel)]="model.nombre" [ngModelOptions]="{standalone: true}" id="nombre" placeholder="">
             <label for="Descripcion">Descripcion</label>
             <input [(ngModel)]="model.descripcion" [ngModelOptions]="{standalone: true}" id="descripcion" placeholder="">
-            <label for="Antiguedad">Antiguedad</label>
-            <input [(ngModel)]="model.antiguedad" [ngModelOptions]="{standalone: true}" id="antiguedad" placeholder="">
-            <label for="Clasificacion">Clasificacion</label>
-            <input [(ngModel)]="model.clasificacion" [ngModelOptions]="{standalone: true}" id="clasificacion" placeholder="">
+            <label for="Precio">Precio</label>
+            <input [(ngModel)]="model.precio" [ngModelOptions]="{standalone: true}" id="precio" placeholder="">
 
             <div class="boton">
                 <button type="submit" id="btn-agregar">Agregar</button>

@@ -1,8 +1,7 @@
 export interface Jeweler {
-    tipos: string;
+    nombre: string;
     descripcion: string;
-    antiguedad: string;
-    clasificacion: string;
+    precio: number;
     id: number;
   }
   
